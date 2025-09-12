@@ -1,7 +1,16 @@
-if SHIELD_MY_KEYBOARD
+if SHIELD_PROTO1_LEFT
 
-# Name must be less than 16 characters long!
-config ZMK_PROTO1
-    default "My Keyboard"
+config ZMK_KEYBOARD_NAME
+    default "Proto1"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_PROTO1_LEFT || SHIELD_PROTO1_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif
